@@ -14,7 +14,7 @@ function mostrarResumo() {
     resumo += `Valor total: R$ ${total.toFixed(2)}\n`;
     resumo += `Valor médio: R$ ${media.toFixed(2)}\n`;
     resumo += `Maior despesa: R$ ${maiorDespesa.toFixed(2)}\n`;
-    resumo += " Despesas em categoria \n";
+    resumo += " Despesas em categorias \n";
 
     const emCategoria= {};
     despesaPessoal.forEach(despesa => {
@@ -47,11 +47,11 @@ let escolha;
 
 do {
     escolha = prompt(
-        " Despesas Pessoal \n\n" +
+        " Despesas Pessoais \n\n" +
         "1. Adicione sua despesa\n" +
         "2. Ver resumo das despesas\n" +
         "3. Listar todas despesas\n" +
-        "4. Limpar todas despesas pessoal\n" +
+        "4. Limpar todas despesas\n" +
         "5. Sair do menu\n\n" +
         "Digite o número da opção que você deseja:"
     );
@@ -81,7 +81,7 @@ case "3":
 if (despesaPessoal.length === 0) {
     alert("Não existem despesas cadastradas.");
 } else {
-    let listaDespesa = " Lista das despesas \n\n";
+    let listaDespesa = " Lista da despesa \n\n";
     despesaPessoal.forEach((despesa, index) => {
         listaDespesa += `${index ++}. Categoria: ${despesa.categoria} | Valor: R$ ${despesa.valor.toFixed(2)}\n`;
     });
